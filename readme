@@ -1,0 +1,25 @@
+feature.py
+    pickle_keypoints(keypoints, descriptors)       # pack keypoint and descriptor
+    unpickle_keypoints(array)                      # unpack keypoint and descriptor
+
+ communication.py
+    setupServer(host,port)                         # setup server with socket
+    setupConnection(server)                        # setup connection with socket
+
+ rootsift.py
+    class RootSIFT:
+        __init__(self)                             # constructor
+        compute(self, image, eps=1e-7)             # compute keypoint and descriptor
+
+ matching.py
+    bruteForce(descriptor1, descriptor2, factor)   # brute-force matching
+
+ basler.py
+    initilizeCamera()                              # initilize basler camera
+    getImgFromCamera(camera, timeDelay=4000, type = cv2.COLOR_YUV2BGR_YUYV)     # get image from basler camera
+
+ util.py
+    includes feature.py
+             communication.py
+             rootsift.py
+             matching.py
